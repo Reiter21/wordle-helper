@@ -29,7 +29,7 @@ while True:
             potential_letters.add(f"%{word[i]}%")
     for i in range(5):
         if status[i] == 'w':
-            if not word[i] in correct_letters:
+            if not word[i] in correct_letters and not f"%{word[i]}%" in potential_letters:
                 incorrect_letters.add(f'%{word[i]}%')
 
     for letter in incorrect_letters:
